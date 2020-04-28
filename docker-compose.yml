@@ -10,6 +10,11 @@ services:
     environment:
       DATABASE_URL: postgres://postgres:postgres@api_db/postgres
 
+  hello:
+    build: ./hello
+    expose:
+      - 8008
+
   api_db:
     image: postgres:11.2-alpine
 
